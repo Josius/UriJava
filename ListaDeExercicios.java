@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import static java.lang.Math.pow;
 public class ListaDeExercicios {
  
     public static void main(String[] args){
@@ -10,7 +10,7 @@ public class ListaDeExercicios {
         double raio = ent.nextDouble();
 		double n = 3.14159;
 		
-		double Area = n*Math.pow(raio,2);
+		double Area = n*pow(raio,2);
 		
 		System.out.printf("A=%.4f", Area);
         System.out.println();
@@ -119,7 +119,7 @@ public class ListaDeExercicios {
 		k=4.0/3;
 		pi = 3.14159;
 		raio = ent.nextDouble();
-		vol = pi*k*Math.pow(raio,3);
+		vol = pi*k*pow(raio,3);
 		
 		System.out.printf("VOLUME = %.3f\n", vol);
 		*/
@@ -136,11 +136,11 @@ public class ListaDeExercicios {
 		//Area do Triangulo
 		Tri = (a*c)/2;
 		//Area do Circulo
-		Cir = pi*Math.pow(c, 2);
+		Cir = pi*pow(c, 2);
 		//Area do Trapézio
 		Tra = ((a+b)*c)/2;
 		//Area do Quadrado
-		Qua = Math.pow(b, 2);
+		Qua = pow(b, 2);
 		//Area do Retangulo
 		Ret = a*b;
 		
