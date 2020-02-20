@@ -1,5 +1,8 @@
 import java.util.Scanner;
 import static java.lang.Math.pow;
+import static java.lang.Math.sqrt;
+import static java.lang.Math.abs;
+
 public class ListaDeExercicios {
  
     public static void main(String[] args){
@@ -146,6 +149,49 @@ public class ListaDeExercicios {
 		
 		System.out.printf("TRIANGULO: %.3f\nCIRCULO: %.3f\nTRAPEZIO: %.3f\nQUADRADO: %.3f\nRETANGULO: %.3f\n", Tri, Cir, Tra, Qua, Ret);
 		*/
+		//1013
+		/*
+		Scanner ent = new Scanner(System.in);
 		
+		int a, b, c, maiorAB, maiorCBA;
+		
+		a = ent.nextInt();
+		b = ent.nextInt();
+		c = ent.nextInt();
+		maiorAB = (a+b+abs(a-b))/2;
+		maiorCBA = (maiorAB+c+abs(maiorAB-c))/2;
+		
+		System.out.println(maiorCBA + " eh o maior");
+		*/
+		//1014
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		int dist = ent.nextInt();
+		double comb = ent.nextDouble();
+		
+		double cons = dist/comb;
+		
+		System.out.printf("%.3f km/l\n", cons);
+		*/
+		//1015
+		/*
+		Scanner ent = new Scanner(System.in);
+		double[] vetor = new double[4];
+		
+		for(int i=0; i<vetor.length; i++){
+			vetor[i] = ent.nextDouble();
+		}
+		
+		double dist = sqrt(pow(abs(vetor[2]-vetor[0]),2) + pow(abs(vetor[3]-vetor[1]),2));
+		
+		System.out.printf("%.4f\n",dist);
+		*/
+		//1016
+		/*        
+        Scanner ent = new Scanner(System.in);
+        int a = ent.nextInt();
+        System.out.println(a*2 + " minutos");
+		*/
     }
 }
