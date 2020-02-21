@@ -193,5 +193,20 @@ public class ListaDeExercicios {
         int a = ent.nextInt();
         System.out.println(a*2 + " minutos");
 		*/
+		//1017
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		int tempViag, velMed, distPer, kmPLt;
+		
+		kmPLt = 12;
+		tempViag = ent.nextInt();
+		velMed = ent.nextInt();
+		distPer = tempViag * velMed;
+		
+    	double ltsNec = (double)distPer/kmPLt;
+		
+		System.out.printf("%.3f\n", ltsNec);
+		*/
     }
 }
