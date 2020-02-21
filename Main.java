@@ -10,17 +10,57 @@ public class Main {
         
         Scanner ent = new Scanner(System.in);        
         
-        int[] divisores = {100, 50, 20, 10, 5, 2, 1};
-        int num1, tot;
-        num1 = ent.nextInt();
-        
-        for(int i=0; i <=7; i++){
-            tot = num1/divisores[i];
-            System.out.println(tot);
-        }
-        
-        
-//        System.out.println(num1/num2);
-  //      System.out.println(num1%num2);
+		int valorEnt = ent.nextInt();
+		int valor = 0;
+		String s = Integer.toString(valorEnt);
+		
+		if((valorEnt > 0) && (valorEnt < 1000000)){
+			if(valorEnt >= 100){
+				valor = valorEnt / 100;
+				s += "\n" + valor + " nota(s) de R$ 100,00";
+				valorEnt -= (valor*100);
+				System.out.println("esi " + valorEnt);
+			}
+			
+			if(valorEnt < 100){
+				valor = valorEnt / 50;
+				s += "\n" + valor + " nota(s) de R$ 50,00";
+				valorEnt -=(valor*50);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 50){
+				valor = valorEnt / 20;
+				s += "\n" + valor + " nota(s) de R$ 20,00";
+				valorEnt -=(valor*20);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 20){
+				valor = valorEnt / 10;
+				s += "\n" + valor + " nota(s) de R$ 10,00";
+				valorEnt -=(valor*10);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 10){
+				valor = valorEnt / 5;
+				s += "\n" + valor + " nota(s) de R$ 5,00";
+				valorEnt -=(valor*5);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 5){
+				valor = valorEnt / 2;
+				s += "\n" + valor + " nota(s) de R$ 2,00";
+				valorEnt -=(valor*2);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 2){
+				valor = valorEnt / 1;
+				s += "\n" + valor + " nota(s) de R$ 1,00";
+				valorEnt -=(valor*1);
+				System.out.println("esi " + valorEnt);
+			}
+		}
+		
+		System.out.println(s);
+		
     }
 }
