@@ -208,5 +208,131 @@ public class ListaDeExercicios {
 		
 		System.out.printf("%.3f\n", ltsNec);
 		*/
+		//1018 - MINHA SOLUÇÃO COM 15% DE ERRO
+		/*
+		Scanner ent = new Scanner(System.in);        
+        
+		int valorEnt = ent.nextInt();
+		int valor = 0;
+		String s = Integer.toString(valorEnt);
+		
+		if((valorEnt > 0) && (valorEnt < 1000000)){
+			if(valorEnt >= 100){
+				valor = valorEnt / 100;
+				s += "\n" + valor + " nota(s) de R$ 100,00";
+				valorEnt -= (valor*100);
+				System.out.println("esi " + valorEnt);
+			}
+			
+			if(valorEnt < 100){
+				valor = valorEnt / 50;
+				s += "\n" + valor + " nota(s) de R$ 50,00";
+				valorEnt -=(valor*50);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 50){
+				valor = valorEnt / 20;
+				s += "\n" + valor + " nota(s) de R$ 20,00";
+				valorEnt -=(valor*20);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 20){
+				valor = valorEnt / 10;
+				s += "\n" + valor + " nota(s) de R$ 10,00";
+				valorEnt -=(valor*10);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 10){
+				valor = valorEnt / 5;
+				s += "\n" + valor + " nota(s) de R$ 5,00";
+				valorEnt -=(valor*5);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 5){
+				valor = valorEnt / 2;
+				s += "\n" + valor + " nota(s) de R$ 2,00";
+				valorEnt -=(valor*2);
+				System.out.println("esi " + valorEnt);
+			}
+			if(valorEnt < 2){
+				valor = valorEnt / 1;
+				s += "\n" + valor + " nota(s) de R$ 1,00";
+				valorEnt -=(valor*1);
+				System.out.println("esi " + valorEnt);
+			}
+		}else{
+			System.exit(0);
+		}
+		
+		System.out.println(s);
+		*/
+		//1018 - SOLUÇÃO CORRETA
+		/*
+		Scanner ent = new Scanner(System.in);        
+        
+		int valorEnt = ent.nextInt();
+		int valorAtual = valorEnt;
+		int notas100, notas50, notas20, notas10, notas5, notas2, notas1;
+		
+		notas100 = valorAtual/100;
+		valorAtual -= notas100*100;
+		
+		notas50 = valorAtual/50;
+		valorAtual -= notas50*50;
+		
+		notas20 = valorAtual/20;
+		valorAtual -= notas20*20;
+		
+		notas10 = valorAtual/10;
+		valorAtual -= notas10*10;
+		
+		notas5 = valorAtual/5;
+		valorAtual -= notas5*5;
+		
+		notas2 = valorAtual/2;
+		valorAtual -= notas2*2;
+		
+		notas1 = valorAtual;
+		
+		System.out.println(valorEnt);
+		System.out.println(notas100 + " nota(s) de R$ 100,00");
+		System.out.println(notas50 + " nota(s) de R$ 50,00");
+		System.out.println(notas20 + " nota(s) de R$ 20,00");
+		System.out.println(notas10 + " nota(s) de R$ 10,00");
+		System.out.println(notas5 + " nota(s) de R$ 5,00");
+		System.out.println(notas2 + " nota(s) de R$ 2,00");
+		System.out.println(notas1 + " nota(s) de R$ 1,00");
+		*/
+		//1019
+        /*
+        Scanner ent = new Scanner(System.in);        
+        
+		int valor = ent.nextInt();
+		int hor, hor2, min, seg;
+		
+		hor = valor/3600;
+		hor2 = valor%3600;
+		min = hor2/60;
+		seg = valor%60;
+		
+		System.out.printf(hor + ":" + min + ":" + seg + "\n");
+		*/
+		//1020
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		int ano, restAno, mes, dia;
+		int valor = ent.nextInt();
+		
+		ano = valor/365;
+		restAno = valor%365;
+		mes = restAno/30;
+		dia = restAno%30;
+		
+		System.out.printf("%d ano(s)\n%d mes(es)\n%d dia(s)\n", ano, mes, dia);
+		*/
+		//1021
+		
+		
     }
 }

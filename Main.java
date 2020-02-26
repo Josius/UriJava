@@ -6,61 +6,27 @@ import static java.lang.Math.abs;
 public class Main {
  
     public static void main(String[] args){
-        //1018
         
-        Scanner ent = new Scanner(System.in);        
-        
-		int valorEnt = ent.nextInt();
-		int valor = 0;
-		String s = Integer.toString(valorEnt);
+		Scanner ent = new Scanner(System.in);
 		
-		if((valorEnt > 0) && (valorEnt < 1000000)){
-			if(valorEnt >= 100){
-				valor = valorEnt / 100;
-				s += "\n" + valor + " nota(s) de R$ 100,00";
-				valorEnt -= (valor*100);
-				System.out.println("esi " + valorEnt);
-			}
-			
-			if(valorEnt < 100){
-				valor = valorEnt / 50;
-				s += "\n" + valor + " nota(s) de R$ 50,00";
-				valorEnt -=(valor*50);
-				System.out.println("esi " + valorEnt);
-			}
-			if(valorEnt < 50){
-				valor = valorEnt / 20;
-				s += "\n" + valor + " nota(s) de R$ 20,00";
-				valorEnt -=(valor*20);
-				System.out.println("esi " + valorEnt);
-			}
-			if(valorEnt < 20){
-				valor = valorEnt / 10;
-				s += "\n" + valor + " nota(s) de R$ 10,00";
-				valorEnt -=(valor*10);
-				System.out.println("esi " + valorEnt);
-			}
-			if(valorEnt < 10){
-				valor = valorEnt / 5;
-				s += "\n" + valor + " nota(s) de R$ 5,00";
-				valorEnt -=(valor*5);
-				System.out.println("esi " + valorEnt);
-			}
-			if(valorEnt < 5){
-				valor = valorEnt / 2;
-				s += "\n" + valor + " nota(s) de R$ 2,00";
-				valorEnt -=(valor*2);
-				System.out.println("esi " + valorEnt);
-			}
-			if(valorEnt < 2){
-				valor = valorEnt / 1;
-				s += "\n" + valor + " nota(s) de R$ 1,00";
-				valorEnt -=(valor*1);
-				System.out.println("esi " + valorEnt);
-			}
-		}
+		double nota100, nota50, nota20, nota10, nota5, nota2, moeda1, moeda50, moeda25, moeda10, moeda5, moeda1;
+		double valor = ent.nextDouble();
+		double vlrAtual = valor;
 		
-		System.out.println(s);
+		nota100 = vlrAtual/100.00;
+		vlrAtual -= nota100*100.00;
+		nota50 = vlrAtual/50.00;
+		vlrAtual -= nota50*50.00;
+		nota20 = vlrAtual/20.00;
+		vlrAtual -= nota20*20.00;
+		nota10 = vlrAtual/10.00;
+		vlrAtual -= nota10*10.00;
+		nota5 = vlrAtual/5.00;
+		vlrAtual -= nota5*5.00;
+		nota2 = vlrAtual/2.00;
+		vlrAtual -= nota2*2.00;
+		
+		
 		
     }
 }
