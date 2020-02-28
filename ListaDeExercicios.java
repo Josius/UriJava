@@ -331,8 +331,106 @@ public class ListaDeExercicios {
 		
 		System.out.printf("%d ano(s)\n%d mes(es)\n%d dia(s)\n", ano, mes, dia);
 		*/
-		//1021
+		//1021 - MINHA SOLUÇÃO COM 5% DE ERRO
+		/*
+		Scanner ent = new Scanner(System.in);
 		
+		double resto, nota100, nota50, nota20, nota10, nota5, nota2, moeda1, moeda50, moeda25, moeda10, moeda5, moeda01;
+		double valor = ent.nextDouble();
+		double vlrAtual = valor;
+		
+		resto = vlrAtual%100;
+		nota100 = (vlrAtual-resto)/100;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%50;
+		nota50 = (vlrAtual-resto)/50;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%20;
+		nota20 = (vlrAtual-resto)/20;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%10;
+		nota10 = (vlrAtual-resto)/10;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%5;
+		nota5 = (vlrAtual-resto)/5;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%2;
+		nota2 = (vlrAtual-resto)/2;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%1;
+		moeda1 = (vlrAtual-resto)/1;
+		vlrAtual = resto;
+
+		resto = vlrAtual%0.5;
+		moeda50 = (vlrAtual-resto)/0.5;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%0.25;
+		moeda25 = (vlrAtual-resto)/0.25;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%0.10;
+		moeda10 = (vlrAtual-resto)/0.10;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%0.05;
+		moeda5 = (vlrAtual-resto)/0.05;
+		vlrAtual = resto;
+		
+		resto = vlrAtual%0.01;
+		moeda01 = (vlrAtual-resto)/0.01;
+		vlrAtual = resto;
+		//MUDAR PARA PRINTF deu erro de 100 %
+		System.out.println("NOTAS:");
+		System.out.println(nota100 + " nota(s) de R$ 100.00");
+		System.out.println(nota50 + " nota(s) de R$ 50.00");
+		System.out.println(nota20 + " nota(s) de R$ 20.00");
+		System.out.println(nota10 + " nota(s) de R$ 10.00");
+		System.out.println(nota5 + " nota(s) de R$ 5.00");
+		System.out.println(nota2 + " nota(s) de R$ 2.00");
+		System.out.println("MOEDAS:");
+		System.out.println(moeda1 + " moeda(s) de R$ 1.00");
+		System.out.println(moeda50 + " moeda(s) de R$ 0.50");
+		System.out.println(moeda25 + " moeda(s) de R$ 0.25");
+		System.out.println(moeda10 + " moeda(s) de R$ 0.10");
+		System.out.println(moeda5 + " moeda(s) de R$ 0.05");
+		System.out.println(moeda01 + " moeda(s) de R$ 0.01");
+		*/
+		//1021 - RESPOSTA CORRETA
+		//Pessoal, o erro acontece porque o double não arredonda valores abaixo de 0,4 para 0,5; ele arredonda para 0. Sendo assim, o ideial é multiplicar o valor recebido por 100 e somar 0.05. Na hora de realizar o calculo devemos fazer a correção dividindo o mesmo por 100. Segue exemplo abaixo:
+		/*
+		Scanner sc = new Scanner(System.in);
+
+		double notas[] = {100.0, 50.0, 20.0, 10.0, 5.0, 2.0};
+		double moedas[] = {1.0, 0.50, 0.25, 0.10, 0.05, 0.01};
+		int qtdNota, qtdMoeda;
+
+		double valor = sc.nextDouble();
+		valor = (valor * 100) + 0.05;
+
+		System.out.println("NOTAS:");
+		for (int i = 0; i < notas.length; i++) {
+			qtdNota = (int) (valor / (notas[i] * 100));
+			valor %= notas[i] * 100;
+			System.out.printf("%d nota(s) de R$ %.2f%n", qtdNota, notas[i]);
+		}
+
+		System.out.println("MOEDAS:");
+		for (int i = 0; i < moedas.length; i++) {
+			qtdMoeda = (int) (valor / (moedas[i] * 100));
+			valor %= moedas[i] * 100;
+			System.out.printf("%d moeda(s) de R$ %.2f%n", qtdMoeda, moedas[i]);
+		}
+
+		sc.close();
+		*/
+		//1035
 		
     }
 }
