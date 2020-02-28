@@ -18,6 +18,13 @@ public class Main {
 		soma1 = c+d;
 		soma2 = a+b;
 		*/
+		
+		if((b>c) && (d>a) && (c+d > a+b) && (c>0) && (d>0) && (a%2==0)){
+			System.out.println("Valores aceitos");
+		}else{
+			System.out.println("Valores nao aceitos");
+		}
+		/*
 		if((b>c) && (d>a)){
 			if(c+d > a+b){
 				if((c>0) && (d>0)){
@@ -26,14 +33,8 @@ public class Main {
 					}
 				}
 			}
-		}else if((b<=c) || (d<=a)){
-			if(c+d <= a+b){
-				if((c<=0) || (d<=0)){
-					if(a%2!=0){
-						System.out.println("Valores nao aceitos");
-					}
-				}
-			}
-		}
+		}else{
+			System.out.println("Valores nao aceitos");
+		}*/
 	}
 }
