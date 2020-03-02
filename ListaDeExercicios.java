@@ -553,5 +553,112 @@ public class ListaDeExercicios {
 			System.out.printf("Total: R$ %.2f%n", total);
 		}
 		*/
+		//1040
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		float num1, num2, num3, num4, exame, media;
+		num1 = ent.nextFloat();
+		num2 = ent.nextFloat();
+		num3 = ent.nextFloat();
+		num4 = ent.nextFloat();
+		
+		media = ((2*num1)+(3*num2)+(4*num3)+(1*num4))/10;
+		
+		System.out.printf("Media: %.1f%n", media);
+		
+		if(media < 5.0){
+			System.out.println("Aluno reprovado.");
+		}else if(media <= 6.9){
+			System.out.println("Aluno em exame.");
+			exame = ent.nextFloat();
+			System.out.printf("Nota do exame: %.1f%n", exame);
+			media = (media + exame)/2;
+			
+			if(media<=4.9){
+				System.out.println("Aluno reprovado.");
+				System.out.printf("Media final: %.1f%n", media);
+			}else{
+				System.out.println("Aluno aprovado.");
+				System.out.printf("Media final: %.1f%n", media);
+			}
+		}else{
+			System.out.println("Aluno aprovado.");
+		}
+		*/
+		//1040 - UMA SOLUÇÃO INTERESSANTE
+		/*
+		import java.io.IOException;
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) throws IOException {
+
+        Scanner entrada = new Scanner(System.in);
+        double N1 = (entrada.nextDouble() * 2) / 10;
+        double N2 = (entrada.nextDouble() * 3) / 10;
+        double N3 = (entrada.nextDouble() * 4) / 10;
+        double N4 = (entrada.nextDouble() * 1) / 10;
+        double N5;
+        double media = N1 + N2 + N3 + N4;
+
+        if (media*10 - Math.floor(media*10) > 0.5001) {
+          media = Math.ceil(media*10)/10;
+        }
+
+        else {
+           media = Math.floor(media*10)/10;
+        }
+
+       System.out.printf("Media: %.1f\n", media);
+        if (media < 5.0) {
+          System.out.println("Aluno reprovado.");
+        }
+        if (media >= 7.0) {
+          System.out.printf("Aluno aprovado.\n");
+        }
+        else if (media >= 5.0) {
+          System.out.printf("Aluno em exame.\n");
+          N5 = entrada.nextDouble();
+          System.out.printf("Nota do exame: %.1f\n",N5);
+          media = (media + N5) / 2;
+          if (media >= 5) {
+            System.out.println("Aluno aprovado.");
+          }
+          else {
+            System.out.println("Aluno reprovado.");
+          }
+          System.out.printf("Media final: %.1f\n",media);
+
+        }
+
+    }
+}
+		*/
+		//1041
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		double x, y;
+		x = ent.nextDouble();
+		y = ent.nextDouble();
+		
+		if((x==0) && (y==0)){
+			System.out.println("Origem");
+		}else if((x==0) && (y!=0)){
+			System.out.println("Eixo Y");
+		}else if((x!=0) && (y==0)){
+			System.out.println("Eixo X");
+		}else if((x>0) && (y>0)){
+			System.out.println("Q1");
+		}else if((x<0) && (y>0)){
+			System.out.println("Q2");
+		}else if((x<0) && (y<0)){
+			System.out.println("Q3");
+		}else if((x>0) && (y<0)){
+			System.out.println("Q4");
+		}
+		*/
     }
 }
