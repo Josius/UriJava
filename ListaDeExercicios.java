@@ -402,7 +402,7 @@ public class ListaDeExercicios {
 		System.out.println(moeda5 + " moeda(s) de R$ 0.05");
 		System.out.println(moeda01 + " moeda(s) de R$ 0.01");
 		*/
-		//1021 - RESPOSTA CORRETA
+		//1021 - SOLUÇÃO CORRETA
 		//Pessoal, o erro acontece porque o double não arredonda valores abaixo de 0,4 para 0,5; ele arredonda para 0. Sendo assim, o ideial é multiplicar o valor recebido por 100 e somar 0.05. Na hora de realizar o calculo devemos fazer a correção dividindo o mesmo por 100. Segue exemplo abaixo:
 		/*
 		Scanner sc = new Scanner(System.in);
@@ -430,7 +430,102 @@ public class ListaDeExercicios {
 
 		sc.close();
 		*/
-		//1035
+		//1035 - MINHA SOLUÇÃO COM 15% DE ERRO
+		/*
+		Scanner ent = new Scanner(System.in);
 		
+		int a, b, c, d;
+		a = ent.nextInt();
+		b = ent.nextInt();
+		c = ent.nextInt();
+		d = ent.nextInt();
+		
+		if((b>c) && (d>a)){
+			if(c+d > a+b){
+				if((c>0) && (d>0)){
+					if(a%2==0){
+						System.out.println("Valores aceitos");
+					}
+				}
+			}
+		}else{
+			System.out.println("Valores nao aceitos");
+		}
+		*/
+		//1035 - SOLUÇÃO CORRETA
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		int a, b, c, d, par, soma1, soma2;
+		a = ent.nextInt();
+		b = ent.nextInt();
+		c = ent.nextInt();
+		d = ent.nextInt();		
+		
+		if((b>c) && (d>a) && (c+d > a+b) && (c>0) && (d>0) && (a%2==0)){
+			System.out.println("Valores aceitos");
+		}else{
+			System.out.println("Valores nao aceitos");
+		}
+		*/
+		//1036 - MINHA SOLUÇÃO COM 5% DE ERRO
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		double a, b, c, delta;
+		a = ent.nextDouble();
+		b = ent.nextDouble();
+		c = ent.nextDouble();
+		
+		delta = Math.pow(b, 2) -(4*a*c);
+				
+		if((a == 0) || (delta < 0)){
+		    System.out.println("Impossível calcular");
+		}else{
+		    double x1 = (((-1*b) + Math.pow(delta, 0.5))/(2*a));
+		    double x2 = (((-1*b) - Math.pow(delta, 0.5))/(2*a));
+		    System.out.printf("R1 = %.5f\n",x1);
+		    System.out.printf("R2 = %.5f\n",x2);
+		}
+		*/
+		//1036 - SOLUÇÃO CORRETA
+		/*
+		Scanner entrada = new Scanner(System.in);
+		double A,B,C,DELTA;
+
+		A = entrada.nextDouble();
+		B = entrada.nextDouble();
+		C = entrada.nextDouble();
+
+		DELTA = Math.pow(B,2) - (4 * A * C);
+
+		if ((A==0) || (DELTA < 0)) {
+			System.out.println("Impossivel calcular");
+		}
+		else {
+			double R1 = (((-1 * B) + Math.pow(DELTA, 0.5)) / (2*A));
+			double R2 = (((-1 * B) - Math.pow(DELTA, 0.5)) / (2*A));
+			System.out.printf("R1 = %.5f\n",R1);
+			System.out.printf("R2 = %.5f\n",R2);
+		}
+		*/
+		//1037
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		double num = ent.nextDouble();
+		
+		if((num>=0.0) && (num<=25.0)){
+			System.out.println("Intervalo [0,25]");
+		}else if ((num>25.0) && (num<=50.0)){
+			System.out.println("Intervalo (25,50]");
+		}else if((num>50.0) && (num<=75.0)){
+			System.out.println("Intervalo (50,75]");
+		}else if((num>75.0) && (num<=100.0)){
+			System.out.println("Intervalo (75,100]");
+		}else {
+			System.out.println("Fora de intervalo");
+		}
+		*/
     }
 }

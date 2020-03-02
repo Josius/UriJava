@@ -9,32 +9,19 @@ public class Main {
 		
 		Scanner ent = new Scanner(System.in);
 		
-		int a, b, c, d, par, soma1, soma2;
-		a = ent.nextInt();
-		b = ent.nextInt();
-		c = ent.nextInt();
-		d = ent.nextInt();
-		/*par = a%2;
-		soma1 = c+d;
-		soma2 = a+b;
-		*/
+		double num = ent.nextDouble();
 		
-		if((b>c) && (d>a) && (c+d > a+b) && (c>0) && (d>0) && (a%2==0)){
-			System.out.println("Valores aceitos");
-		}else{
-			System.out.println("Valores nao aceitos");
+		if((num>=0.0) && (num<=25.0)){
+			System.out.println("Intervalo [0,25]");
+		}else if ((num>25.0) && (num<=50.0)){
+			System.out.println("Intervalo (25,50]");
+		}else if((num>50.0) && (num<=75.0)){
+			System.out.println("Intervalo (50,75]");
+		}else if((num>75.0) && (num<=100.0)){
+			System.out.println("Intervalo (75,100]");
+		}else {
+			System.out.println("Fora de intervalo");
 		}
-		/*
-		if((b>c) && (d>a)){
-			if(c+d > a+b){
-				if((c>0) && (d>0)){
-					if(a%2==0){
-						System.out.println("Valores aceitos");
-					}
-				}
-			}
-		}else{
-			System.out.println("Valores nao aceitos");
-		}*/
+
 	}
 }
