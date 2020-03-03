@@ -660,5 +660,112 @@ public class Main {
 			System.out.println("Q4");
 		}
 		*/
+		//1042
+		/*
+		Scanner ent = new Scanner(System.in);
+        
+        int num1, num2, num3, menor, medio, maior;
+
+		num1 = ent.nextInt();
+		num2 = ent.nextInt();
+		num3 = ent.nextInt();
+		
+		menor = num1;
+		medio = num2;
+		maior = num3;
+        
+		if((num1 < num2) && (num1 < num3)){
+		    menor = num1;
+		    if(num2 <= num3){
+		        medio = num2;
+		        maior = num3;
+		    }else{
+		        medio = num3;
+		        maior = num2;
+		    }
+		}
+		if((num2 < num1) && (num2 < num3)){
+		    menor = num2;
+		    if(num1 <= num3){
+		        medio = num1;
+		        maior = num3;
+		    }else{
+		        medio = num3;
+		        maior = num1;
+		    }   
+		}
+		if((num3 < num1) && (num3 < num2)){
+		    menor = num3;
+		    if(num1 <= num2){
+		        medio = num1;
+		        maior = num2;
+		    }else{
+		        medio = num2;
+		        maior = num1;
+		    }
+		}
+		
+		System.out.println(menor);
+		System.out.println(medio);
+		System.out.println(maior);
+		System.out.println();
+		System.out.println(num1);
+		System.out.println(num2);
+		System.out.println(num3);
+		*/
+		//1043
+		/*
+		        Scanner ent = new Scanner(System.in);
+        double a, b, c;
+        a = ent.nextDouble();
+        b = ent.nextDouble();
+        c = ent.nextDouble();
+        
+        if((abs(a-c) < b) && (b < (a+c))){
+            System.out.println("Perimetro = " + (a+b+c));
+        }else{
+            System.out.println("Area = " + ((a+b)*c)/2);
+        }
+		*/
+		//1044 - MINHA SOLUÇÃO COM PRESENTATION ERROR
+		/*
+		Scanner ent = new Scanner(System.in);
+        int x, y, div;
+        x = ent.nextInt();
+        y = ent.nextInt();
+        
+        if(x < y){
+            div = y%x;
+            if(div == 0){
+                System.out.println("Sao multiplos");
+            }else{
+                System.out.println("Nao sao multiplos");
+            }
+        }else if(y < x){
+            div = x%y;
+            if(div == 0){
+                System.out.println("Sao multiplos");
+            }else{
+                System.out.println("Nao sao multiplos");
+            }
+        }
+		*/
+		//1044 - SOLUÇÃO CORRETA
+		/*
+		        Scanner ent = new Scanner(System.in);
+        
+        int a = ent.nextInt();
+        int b = ent.nextInt();
+        
+        if((a%b == 0) || (b%a == 0)){
+            System.out.println("Sao multiplos");
+        }else{
+            System.out.println("Nao sao multiplos");
+        }
+		*/
+		//1045
+		/*
+		
+		*/
     }
 }
