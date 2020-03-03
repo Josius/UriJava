@@ -752,7 +752,7 @@ public class Main {
 		*/
 		//1044 - SOLUÇÃO CORRETA
 		/*
-		        Scanner ent = new Scanner(System.in);
+		Scanner ent = new Scanner(System.in);
         
         int a = ent.nextInt();
         int b = ent.nextInt();
@@ -764,6 +764,253 @@ public class Main {
         }
 		*/
 		//1045
+		/*
+		Scanner ent = new Scanner(System.in);
+		double a, b, c, menor, medio, maior, A,B,C;
+		
+		a = ent.nextDouble();
+		b = ent.nextDouble();
+		c = ent.nextDouble();
+		menor = 0;
+		medio = 0;
+		maior = 0;
+		
+		if((a <= b) && (a <= c)){
+			menor = a;
+			if(b <= c){
+				medio = b;
+				maior = c;
+			}else{
+				medio = c;
+				maior =b;
+			}
+		}
+		if((b <= a) && (b <= c)){
+			menor = b;
+			if(a <= c){
+				medio = a;
+				maior =c;
+			}else{
+				medio = c;
+				maior = a;
+			}
+		}
+		if((c <= a) && (c <= b)){
+			menor = c;
+			if(a < b){
+				medio = a;
+				maior = b;
+			}else{
+				medio = b;
+				maior = a;
+			}
+		}
+		
+		A = pow(maior,2);
+		B = pow(medio,2);
+		C = pow(menor,2);
+		
+		if(maior >= (menor + medio)){
+			System.out.println("NAO FORMA TRIANGULO");
+		}else{
+			if(A == (B+C)){
+				System.out.println("TRIANGULO RETANGULO");
+			}
+			if(A > (B+C)){
+				System.out.println("TRIANGULO OBTUSANGULO");
+			}
+			if(A < (B+C)){
+				System.out.println("TRIANGULO ACUTANGULO");
+			}
+			if((a==b) && (b==c) && (c==a)){
+				System.out.println("TRIANGULO EQUILATERO");
+			}
+			if(((a==b) && (b!=c)) || ((b==c) && (c!=a)) || ((c==a) && (a!=b))){
+				System.out.println("TRIANGULO ISOSCELES");
+			}
+		}
+		*/
+		//1046 - MINHA SOLUÇÃO COM 5% DE ERRO
+		/*
+		Scanner ent = new Scanner(System.in);
+		int inicio, fim, duracao, dia;
+		inicio = ent.nextInt();
+		fim = ent.nextInt();
+		dia = 24;
+		duracao = abs(inicio-fim);
+		
+		if(inicio==fim){
+			System.out.println("O JOGO DUROU 24 HORA(S)");
+		}
+		if(inicio > fim){
+			dia -= duracao;
+			System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+		}
+		if(inicio < fim){
+			dia -= duracao;
+			System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
+		}
+		*/
+		//1046 - SOLUÇÃO CORRETA
+		/*		
+		Scanner teclado = new Scanner(System.in);
+
+		int ini,fim, duracao;
+		ini = teclado.nextInt();
+		fim = teclado.nextInt();
+			
+		if(ini == fim){
+			System.out.println("O JOGO DUROU 24 HORA(S)");
+		}
+		else if(ini > fim){
+			duracao = (24 - ini) + fim ;
+			System.out.println("O JOGO DUROU "+duracao+" HORA(S)");
+		}
+		else if(ini < fim){
+			duracao = fim - ini;
+			System.out.println("O JOGO DUROU "+duracao+" HORA(S)");
+		}
+		*/
+		//1047 - MINHA SOLUÇÃO COM 5% DE ERRO
+		/*
+		int ini,fim, minIni, minFim, duracao;
+		ini = ent.nextInt();
+		minIni = ent.nextInt();
+		fim = ent.nextInt();
+		minFim = ent.nextInt();
+			
+		if(ini == fim){
+			if(minIni < minFim){
+				System.out.println("O JOGO DUROU 24 HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni == minFim){
+				System.out.println("O JOGO DUROU 24 HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni > minFim){
+				System.out.println("O JOGO DUROU 23 HORA(S) E "+((60 - minIni)+minFim)+" MINUTO(S)");
+			}
+		}
+		else if(ini > fim){
+			
+			if(minIni < minFim){
+				duracao = (24 - ini) + fim ;
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni == minFim){
+				duracao = (24 - ini) + fim ;
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni > minFim){
+				duracao = (23 - ini) + fim ;
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+((60 - minIni)+minFim)+" MINUTO(S)");
+			}
+		}
+		else if(ini < fim){
+			if(minIni < minFim){
+				duracao = fim-ini;
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni == minFim){
+				duracao = fim-ini;
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+(minFim-minIni)+" MINUTO(S)");
+			}if(minIni > minFim){
+				duracao = ((fim-ini)-1);
+				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+((60 - minIni)+minFim)+" MINUTO(S)");
+			}
+		}
+		*/
+		//1047 - SOLUÇÃO CORRETA - CONVERTE TUDO EM MINUTOS, POIS TRABALHA COM HEXADECIMAL
+		/*
+		Scanner entrada = new Scanner(System.in);
+        int h1 = entrada.nextInt();
+        int m1 = entrada.nextInt();
+        int h2 = entrada.nextInt();
+        int m2 = entrada.nextInt();
+        int mt1 = (h1*60) + m1;
+        int mt2 = (h2*60) + m2;
+        int h24 = (24*60);
+        int resultado = 0;
+        if(mt2>mt1){
+            resultado = mt2-mt1;
+            System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",(resultado/60), (resultado%60));
+        }else if(mt1>mt2){
+            resultado = (h24-mt1)+(mt2);
+            System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",(resultado/60), (resultado%60));
+        }else if(mt2==mt1){
+            System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",24, 0);
+        }
+		*/
+		//1048
+		/*
+		Scanner ent = new Scanner(System.in);
+		double sal, novoSal, reajuste;
+		sal = ent.nextDouble();
+		
+		if((sal>0) && (sal<=400.0)){
+			reajuste = (sal*15)/100;
+			novoSal = sal + reajuste;
+			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
+			System.out.println("Em percentual: 15 %");
+			
+		}else if((sal>400.0) && (sal<=800.0)){
+			reajuste = (sal*12)/100;
+			novoSal = sal + reajuste;
+			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
+			System.out.println("Em percentual: 12 %");
+		}else if((sal>800.0) && (sal<=1200.0)){
+			reajuste = (sal*10)/100;
+			novoSal = sal + reajuste;
+			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
+			System.out.println("Em percentual: 10 %");
+		}else if((sal>1200.0) && (sal<=2000.0)){
+			reajuste = (sal*7)/100;
+			novoSal = sal + reajuste;
+			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
+			System.out.println("Em percentual: 7 %");
+		}else if(sal>2000.0){
+			reajuste = (sal*4)/100;
+			novoSal = sal + reajuste;
+			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
+			System.out.println("Em percentual: 4 %");
+		}
+		*/
+		//1049
+		/*
+		Scanner ent = new Scanner(System.in);
+		
+		String txt1, txt2, txt3;
+		txt1 = ent.next();
+		txt2 = ent.next();
+		txt3 = ent.next();
+		
+		if(txt1.equalsIgnoreCase("vertebrado")){
+			if(txt2.equalsIgnoreCase("ave")){
+				if(txt3.equalsIgnoreCase("carnivoro")){
+					System.out.println("aguia");
+				}else if(txt3.equalsIgnoreCase("onivoro")){
+					System.out.println("pomba");
+				}
+			}else if(txt2.equalsIgnoreCase("mamifero")){
+				if(txt3.equalsIgnoreCase("onivoro")){
+					System.out.println("homem");
+				}else if(txt3.equalsIgnoreCase("herbivoro")){
+					System.out.println("vaca");
+				}
+			}
+		}
+		
+		if(txt1.equalsIgnoreCase("invertebrado")){
+			if(txt2.equalsIgnoreCase("inseto")){
+				if(txt3.equalsIgnoreCase("hematofago")){
+					System.out.println("pulga");
+				}else if(txt3.equalsIgnoreCase("herbivoro")){
+					System.out.println("lagarta");
+				}
+			}else if(txt2.equalsIgnoreCase("anelideo")){
+				if(txt3.equalsIgnoreCase("hematofago")){
+					System.out.println("sanguessuga");
+				}else if(txt3.equalsIgnoreCase("onivoro")){
+					System.out.println("minhoca");
+				}
+			}
+		}
+		*/
+		//1050
 		/*
 		
 		*/
