@@ -8,7 +8,7 @@ public class ListaDeExercicios {
     public static void main(String[] args){
 		
 		//1002
-		/*
+		
 		Scanner ent = new Scanner(System.in);
         double raio = ent.nextDouble();
 		double n = 3.14159;
@@ -17,17 +17,17 @@ public class ListaDeExercicios {
 		
 		System.out.printf("A=%.4f", Area);
         System.out.println();
-		*/
+		
 		//1003
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		int a = ent.nextInt();
 		int b = ent.nextInt();
 		int soma = a + b;
 		System.out.println("SOMA = "+soma);
-		*/
+		
 		//1004
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		int a = ent.nextInt();
 		int b = ent.nextInt();
@@ -35,9 +35,9 @@ public class ListaDeExercicios {
 		int prod = a * b;
 		
 		System.out.println("PROD = "+ prod);
-		*/
+		
 		//1005
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		double a = ent.nextDouble();
 		double b = ent.nextDouble();
@@ -45,9 +45,9 @@ public class ListaDeExercicios {
 		double media = ((a*3.5) + (b*7.5))/11;
 		
 		System.out.printf("MEDIA = %.5f\n", media);
-		*/
+		
 		//1006
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double a = ent.nextDouble();
@@ -57,9 +57,9 @@ public class ListaDeExercicios {
 		double media = ((a*2.0)+(b*3.0)+(c*5.0))/10;
 		
 		System.out.printf("MEDIA = %.1f\n", media);
-		*/
+		
 		//1007
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int a = ent.nextInt();
@@ -70,9 +70,9 @@ public class ListaDeExercicios {
 		int total = ((a*b)-(c*d));
 		
 		System.out.println("DIFERENÇA = " + total);
-		*/
+		
 		//1008
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int num = ent.nextInt();
@@ -82,9 +82,9 @@ public class ListaDeExercicios {
 		double salario = horas*valorPHora;
 		
 		System.out.printf("NUMBER = %d\nSALARY = U$ %.2f\n", num, salario);
-		*/
+		
 		//1009
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		double salFixo, vendas, comissao, salTotal;
 		
@@ -96,9 +96,9 @@ public class ListaDeExercicios {
 		salTotal = salFixo+comissao;
 
 		System.out.printf("TOTAL = R$ %.2f\n", salTotal);
-        */
+        
 		//1010
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int cod, qtd;
@@ -113,9 +113,9 @@ public class ListaDeExercicios {
 			aPagar +=total;
 		}
 		System.out.printf("VALOR A PAGAR: R$ %.2f\n", aPagar);
-		*/
+		
 		//1011
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double vol, raio, pi, k;
@@ -125,9 +125,9 @@ public class ListaDeExercicios {
 		vol = pi*k*pow(raio,3);
 		
 		System.out.printf("VOLUME = %.3f\n", vol);
-		*/
+		
 		//1012
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double a, b, c, pi, Tri, Cir, Tra, Qua, Ret;
@@ -148,9 +148,9 @@ public class ListaDeExercicios {
 		Ret = a*b;
 		
 		System.out.printf("TRIANGULO: %.3f\nCIRCULO: %.3f\nTRAPEZIO: %.3f\nQUADRADO: %.3f\nRETANGULO: %.3f\n", Tri, Cir, Tra, Qua, Ret);
-		*/
+		
 		//1013
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int a, b, c, maiorAB, maiorCBA;
@@ -162,9 +162,9 @@ public class ListaDeExercicios {
 		maiorCBA = (maiorAB+c+abs(maiorAB-c))/2;
 		
 		System.out.println(maiorCBA + " eh o maior");
-		*/
+		
 		//1014
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int dist = ent.nextInt();
@@ -173,9 +173,9 @@ public class ListaDeExercicios {
 		double cons = dist/comb;
 		
 		System.out.printf("%.3f km/l\n", cons);
-		*/
+		
 		//1015
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		double[] vetor = new double[4];
 		
@@ -186,15 +186,15 @@ public class ListaDeExercicios {
 		double dist = sqrt(pow(abs(vetor[2]-vetor[0]),2) + pow(abs(vetor[3]-vetor[1]),2));
 		
 		System.out.printf("%.4f\n",dist);
-		*/
+		
 		//1016
-		/*        
+		        
         Scanner ent = new Scanner(System.in);
         int a = ent.nextInt();
         System.out.println(a*2 + " minutos");
-		*/
+		
 		//1017
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int tempViag, velMed, distPer, kmPLt;
@@ -207,9 +207,9 @@ public class ListaDeExercicios {
     	double ltsNec = (double)distPer/kmPLt;
 		
 		System.out.printf("%.3f\n", ltsNec);
-		*/
+		
 		//1018 - MINHA SOLUÇÃO COM 15% DE ERRO
-		/*
+		
 		Scanner ent = new Scanner(System.in);        
         
 		int valorEnt = ent.nextInt();
@@ -265,9 +265,9 @@ public class ListaDeExercicios {
 		}
 		
 		System.out.println(s);
-		*/
+		
 		//1018 - SOLUÇÃO CORRETA
-		/*
+		
 		Scanner ent = new Scanner(System.in);        
         
 		int valorEnt = ent.nextInt();
@@ -302,9 +302,9 @@ public class ListaDeExercicios {
 		System.out.println(notas5 + " nota(s) de R$ 5,00");
 		System.out.println(notas2 + " nota(s) de R$ 2,00");
 		System.out.println(notas1 + " nota(s) de R$ 1,00");
-		*/
+		
 		//1019
-        /*
+        
         Scanner ent = new Scanner(System.in);        
         
 		int valor = ent.nextInt();
@@ -316,9 +316,9 @@ public class ListaDeExercicios {
 		seg = valor%60;
 		
 		System.out.printf(hor + ":" + min + ":" + seg + "\n");
-		*/
+		
 		//1020
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int ano, restAno, mes, dia;
@@ -330,9 +330,9 @@ public class ListaDeExercicios {
 		dia = restAno%30;
 		
 		System.out.printf("%d ano(s)\n%d mes(es)\n%d dia(s)\n", ano, mes, dia);
-		*/
+		
 		//1021 - MINHA SOLUÇÃO COM 5% DE ERRO
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double resto, nota100, nota50, nota20, nota10, nota5, nota2, moeda1, moeda50, moeda25, moeda10, moeda5, moeda01;
@@ -401,10 +401,10 @@ public class ListaDeExercicios {
 		System.out.println(moeda10 + " moeda(s) de R$ 0.10");
 		System.out.println(moeda5 + " moeda(s) de R$ 0.05");
 		System.out.println(moeda01 + " moeda(s) de R$ 0.01");
-		*/
+		
 		//1021 - SOLUÇÃO CORRETA
 		//Pessoal, o erro acontece porque o double não arredonda valores abaixo de 0,4 para 0,5; ele arredonda para 0. Sendo assim, o ideial é multiplicar o valor recebido por 100 e somar 0.05. Na hora de realizar o calculo devemos fazer a correção dividindo o mesmo por 100. Segue exemplo abaixo:
-		/*
+		
 		Scanner sc = new Scanner(System.in);
 
 		double notas[] = {100.0, 50.0, 20.0, 10.0, 5.0, 2.0};
@@ -429,9 +429,9 @@ public class ListaDeExercicios {
 		}
 
 		sc.close();
-		*/
+		
 		//1035 - MINHA SOLUÇÃO COM 15% DE ERRO
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int a, b, c, d;
@@ -451,9 +451,9 @@ public class ListaDeExercicios {
 		}else{
 			System.out.println("Valores nao aceitos");
 		}
-		*/
+		
 		//1035 - SOLUÇÃO CORRETA
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int a, b, c, d, par, soma1, soma2;
@@ -467,9 +467,9 @@ public class ListaDeExercicios {
 		}else{
 			System.out.println("Valores nao aceitos");
 		}
-		*/
+		
 		//1036 - MINHA SOLUÇÃO COM 5% DE ERRO
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double a, b, c, delta;
@@ -487,9 +487,9 @@ public class ListaDeExercicios {
 		    System.out.printf("R1 = %.5f\n",x1);
 		    System.out.printf("R2 = %.5f\n",x2);
 		}
-		*/
+		
 		//1036 - SOLUÇÃO CORRETA
-		/*
+		
 		Scanner entrada = new Scanner(System.in);
 		double A,B,C,DELTA;
 
@@ -508,9 +508,9 @@ public class ListaDeExercicios {
 			System.out.printf("R1 = %.5f\n",R1);
 			System.out.printf("R2 = %.5f\n",R2);
 		}
-		*/
+		
 		//1037
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double num = ent.nextDouble();
@@ -526,9 +526,9 @@ public class ListaDeExercicios {
 		}else {
 			System.out.println("Fora de intervalo");
 		}
-		*/
+		
 		//1038
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		int cod, qtd;
@@ -552,9 +552,9 @@ public class ListaDeExercicios {
 			total = qtd * 1.50;
 			System.out.printf("Total: R$ %.2f%n", total);
 		}
-		*/
+		
 		//1040
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		float num1, num2, num3, num4, exame, media;
@@ -585,9 +585,9 @@ public class ListaDeExercicios {
 		}else{
 			System.out.println("Aluno aprovado.");
 		}
-		*/
+		
 		//1040 - UMA SOLUÇÃO INTERESSANTE
-		/*
+		
 		import java.io.IOException;
 import java.util.Scanner;
 
@@ -635,9 +635,9 @@ public class Main {
 
     }
 }
-		*/
+		
 		//1041
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		double x, y;
@@ -659,9 +659,9 @@ public class Main {
 		}else if((x>0) && (y<0)){
 			System.out.println("Q4");
 		}
-		*/
+		
 		//1042
-		/*
+		
 		Scanner ent = new Scanner(System.in);
         
         int num1, num2, num3, menor, medio, maior;
@@ -712,9 +712,9 @@ public class Main {
 		System.out.println(num1);
 		System.out.println(num2);
 		System.out.println(num3);
-		*/
+		
 		//1043
-		/*
+		
 		        Scanner ent = new Scanner(System.in);
         double a, b, c;
         a = ent.nextDouble();
@@ -726,9 +726,9 @@ public class Main {
         }else{
             System.out.println("Area = " + ((a+b)*c)/2);
         }
-		*/
+		
 		//1044 - MINHA SOLUÇÃO COM PRESENTATION ERROR
-		/*
+		
 		Scanner ent = new Scanner(System.in);
         int x, y, div;
         x = ent.nextInt();
@@ -749,9 +749,9 @@ public class Main {
                 System.out.println("Nao sao multiplos");
             }
         }
-		*/
+		
 		//1044 - SOLUÇÃO CORRETA
-		/*
+		
 		Scanner ent = new Scanner(System.in);
         
         int a = ent.nextInt();
@@ -762,9 +762,9 @@ public class Main {
         }else{
             System.out.println("Nao sao multiplos");
         }
-		*/
+		
 		//1045
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		double a, b, c, menor, medio, maior, A,B,C;
 		
@@ -829,9 +829,9 @@ public class Main {
 				System.out.println("TRIANGULO ISOSCELES");
 			}
 		}
-		*/
+		
 		//1046 - MINHA SOLUÇÃO COM 5% DE ERRO
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		int inicio, fim, duracao, dia;
 		inicio = ent.nextInt();
@@ -850,9 +850,9 @@ public class Main {
 			dia -= duracao;
 			System.out.println("O JOGO DUROU " + duracao + " HORA(S)");
 		}
-		*/
+		
 		//1046 - SOLUÇÃO CORRETA
-		/*		
+				
 		Scanner teclado = new Scanner(System.in);
 
 		int ini,fim, duracao;
@@ -870,9 +870,9 @@ public class Main {
 			duracao = fim - ini;
 			System.out.println("O JOGO DUROU "+duracao+" HORA(S)");
 		}
-		*/
+		
 		//1047 - MINHA SOLUÇÃO COM 5% DE ERRO
-		/*
+		
 		int ini,fim, minIni, minFim, duracao;
 		ini = ent.nextInt();
 		minIni = ent.nextInt();
@@ -913,9 +913,9 @@ public class Main {
 				System.out.println("O JOGO DUROU "+duracao+" HORA(S) E "+((60 - minIni)+minFim)+" MINUTO(S)");
 			}
 		}
-		*/
+		
 		//1047 - SOLUÇÃO CORRETA - CONVERTE TUDO EM MINUTOS, POIS TRABALHA COM HEXADECIMAL
-		/*
+		
 		Scanner entrada = new Scanner(System.in);
         int h1 = entrada.nextInt();
         int m1 = entrada.nextInt();
@@ -934,9 +934,9 @@ public class Main {
         }else if(mt2==mt1){
             System.out.printf("O JOGO DUROU %d HORA(S) E %d MINUTO(S)\n",24, 0);
         }
-		*/
+		
 		//1048
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		double sal, novoSal, reajuste;
 		sal = ent.nextDouble();
@@ -968,9 +968,9 @@ public class Main {
 			System.out.printf("Novo salario: %.2f%nReajuste ganho: %.2f%n", novoSal, reajuste);
 			System.out.println("Em percentual: 4 %");
 		}
-		*/
+		
 		//1049
-		/*
+		
 		Scanner ent = new Scanner(System.in);
 		
 		String txt1, txt2, txt3;
@@ -1009,10 +1009,149 @@ public class Main {
 				}
 			}
 		}
-		*/
-		//1050
-		/*
 		
-		*/
+		//1050 - MINHA SOLUÇÃO COM RUNTIME ERROR
+		
+		Scanner ent = new Scanner(System.in);
+		
+		String[] ddd = new String[75];
+		
+		for(int i=0; i<ddd.length; i++){
+		    ddd[i] = "DDD nao cadastrado";
+		}
+		ddd[61] = "Brasilia";
+		ddd[71] = "Salvador";
+		ddd[11] = "Sao Paulo";
+		ddd[21] = "Rio de Janeiro";
+		ddd[32] = "Juiz de Fora";
+		ddd[19] = "Campinas";
+		ddd[27] = "Vitoria";
+		ddd[31] = "Belo Horizonte";
+		
+		int num = ent.nextInt();
+		
+		System.out.println(ddd[num]);   
+		
+		ou
+		
+		Scanner ent = new Scanner(System.in);
+		
+		String[] ddd = new String[72];
+
+		ddd[61] = "Brasilia";
+		ddd[71] = "Salvador";
+		ddd[11] = "Sao Paulo";
+		ddd[21] = "Rio de Janeiro";
+		ddd[32] = "Juiz de Fora";
+		ddd[19] = "Campinas";
+		ddd[27] = "Vitoria";
+		ddd[31] = "Belo Horizonte";
+		
+		int num = ent.nextInt();
+		
+		if(ddd[num] != null){
+			System.out.println(ddd[num]);
+		}else{
+			System.out.println("DDD nao cadastrado");
+		}		
+		
+		//1050 - SOLUÇÃO CORRETA
+		
+				Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		
+		if(num==61){
+		    System.out.println("Brasilia");
+		}else if(num==71){
+		    System.out.println("Salvador");
+		}else if(num==11){
+		    System.out.println("Sao Paulo");
+		}else if(num==21){
+		    System.out.println("Rio de Janeiro");
+		}else if(num==32){
+		    System.out.println("Juiz de Fora");
+		}else if(num==19){
+		    System.out.println("Campinas");
+		}else if(num==27){
+		    System.out.println("Vitoria");
+		}else if(num==31){
+		    System.out.println("Belo Horizonte");
+		}else{
+		    System.out.println("DDD nao cadastrado");
+		}
+		
+		//1051
+		
+		Scanner ent = new Scanner(System.in);
+		double renda, txImp1, txImp2, txImp3;
+		renda = ent.nextDouble();
+		
+		if((renda>=0.0) && (renda<=2000.0)){
+		    System.out.println("Isento");
+		}
+		if((renda>2000.0) && (renda<=3000.0)){
+		    txImp1 = ((renda-2000.0)*0.08);
+		    System.out.printf("R$ %.2f%n", txImp1);
+		}
+		if((renda>3000.0) && (renda<=4500.0)){
+		    txImp1 = 1000.0*0.08;
+    		txImp2 = ((renda-3000.0)*0.18);
+		    System.out.printf("R$ %.2f%n", (txImp1+txImp2));
+		}
+		if(renda>4500.0){
+		    txImp1 = 1000.0*0.08;
+    		txImp2 = 1500.0*0.18;		    
+		    txImp3 = ((renda-4500.0)*28)/100;
+		    System.out.printf("R$ %.2f%n", (txImp1+txImp2+txImp3));
+		}
+		
+		//1052
+		
+		Scanner ent = new Scanner(System.in);
+        String[] mes = new String[13];
+        
+        mes[1] = "January";
+        mes[2] = "February";
+        mes[3] = "March";
+        mes[4] = "April";
+        mes[5] = "May";
+        mes[6] = "June";
+        mes[7] = "July";
+        mes[8] = "August";
+        mes[9] = "September";
+        mes[10] = "October";
+        mes[11] = "November";
+        mes[12] = "December";
+        
+        int num = ent.nextInt();
+        
+        System.out.println(mes[num]);
+		
+		//1059
+		
+		for(int i=1; i<=100; i++){
+		    if(i%2==0){
+		        System.out.println(i);
+		    }
+		}
+		
+		//1060
+		
+		Scanner ent = new Scanner(System.in);
+		
+		double[] num = new double[6];
+		int cont=0;
+		for(int i=0; i<num.length; i++){
+		    num[i] = ent.nextDouble();
+		    if(num[i]>0){
+		        cont++;
+		    }
+		}
+		System.out.println(cont + " valores positivos");
+		
+		//1061
+		
+		
     }
 }
