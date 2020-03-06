@@ -1150,7 +1150,216 @@ public class Main {
 		}
 		System.out.println(cont + " valores positivos");
 		
-		//1061
+		//1061 - O PROBLEMA DESSE EXERCICIO ESTA NA ENTRADA
+		/*
+		Exemplo de Entrada	Exemplo de Saída
+			Dia 5				3 dia(s)
+			08 : 12 : 23		22 hora(s)
+			Dia 9				1 minuto(s)
+			06 : 13 : 23		0 segundo(s)	
+		A ENTRADA LE A STRING 'DIA' E O CARACTERE ':'
+		*/
+		//TENTAR ENTENDER MELHOR A CLASSE SCANNER, PQ ELA LE UM ESPACO COM UMA QUEBRA DE LINHA PARA OUTRO CARACTERE
+		//VER:		https://docs.oracle.com/javase/10/docs/api/java/util/Scanner.html
+		Scanner ent = new Scanner(System.in);
+		
+		int di, hi, mi, si, df, hf, mf, sf, ti, tf, resDia, resHora, resMin;
+		String text;
+		
+		text = ent.next();
+		di = ent.nextInt();
+		
+		hi = ent.nextInt();
+		text = ent.next();
+		mi = ent.nextInt();
+		text = ent.next();
+		si = ent.nextInt();
+		
+		text = ent.next();
+		df = ent.nextInt();
+		
+		hf = ent.nextInt();
+		text = ent.next();
+		mf = ent.nextInt();
+		text = ent.next();
+		sf = ent.nextInt();
+		
+		ti = (di*86400) + (hi*3600) + (mi*60) + si;
+		tf = (df*86400) + (hf*3600) + (mf*60) + sf;
+		resDia = tf - ti;
+		resHora = resDia%86400;
+		resMin = resHora%3600;
+		System.out.println(resDia/86400 + " dia(s)");
+		System.out.println(resHora/3600 + " hora(s)");
+		System.out.println(resMin/60 + " minuto(s)" );
+		System.out.println(resMin%60 + " segundo(s)");
+		
+		//O PROBLEMA NAO VERIFICA SE A DATA INICIAL FOR MAIOR QUE A DATA FINAL
+		/*
+		if(tf == ti){
+			System.out.println(resDia/86400 + " dia(s)");
+			System.out.println(resHora/3600 + " hora(s)");
+			System.out.println(resMin/60 + " minuto(s)" );
+			System.out.println(resMin%60 + " segundo(s)");
+		}if(ti>tf){
+			System.out.println(abs(resDia/86400) + " dia(s)");
+			System.out.println(abs(resHora/3600) + " hora(s)");
+			System.out.println(abs(resMin/60) + " minuto(s)" );
+			System.out.println(abs(resMin%60) + " segundo(s)");
+		}else{
+			System.out.println(resDia/86400 + " dia(s)");
+			System.out.println(resHora/3600 + " hora(s)");
+			System.out.println(resMin/60 + " minuto(s)" );
+			System.out.println(resMin%60 + " segundo(s)");
+		}*/
+		//OUTRA RESOLUCAO INTERESSANTE COM OUTRO TIPO DE ENTRADA PARA ESSE PROBLEMA
+		//VER:		https://www.devmedia.com.br/metodos-split-e-indexof-mais-metodos-da-classe-string/23458	
+		/*
+		Scanner entrada = new Scanner(System.in);
+
+		String dia_1 = entrada.nextLine();
+		String dia_1_horario = entrada.nextLine();
+
+		String[] dia_1_split = dia_1.split(" ");
+		String[] dia_1_horario_split = dia_1_horario.split(" : ");
+
+		String dia_2 = entrada.nextLine();
+		String dia_2_horario = entrada.nextLine();
+
+		String[] dia_2_split = dia_2.split(" ");
+		String[] dia_2_horario_split = dia_2_horario.split(" : ");
+
+		int dia_1_dia = Integer.parseInt(dia_1_split[1]);
+
+		int dia_1_hora = Integer.parseInt(dia_1_horario_split[0]);
+		int dia_1_minutos = Integer.parseInt(dia_1_horario_split[1]);
+		int dia_1_segundos = Integer.parseInt(dia_1_horario_split[2]);
+
+		int dia_2_dia = Integer.parseInt(dia_2_split[1]);
+
+		int dia_2_hora = Integer.parseInt(dia_2_horario_split[0]);
+		int dia_2_minutos = Integer.parseInt(dia_2_horario_split[1]);
+		int dia_2_segundos = Integer.parseInt(dia_2_horario_split[2]);
+
+		dia_1_segundos = (dia_1_dia * 24 * 60 * 60) + (dia_1_hora * 60 * 60) + (dia_1_minutos * 60) + (dia_1_segundos);
+
+		dia_2_segundos = (dia_2_dia * 24 * 60 * 60) + (dia_2_hora * 60 * 60) + (dia_2_minutos * 60) + (dia_2_segundos);
+
+		int  diferenca_segundos = dia_2_segundos - dia_1_segundos;
+
+		int diferenca_segundos_atual = diferenca_segundos;
+
+		int dias = diferenca_segundos_atual / (24 * 60 * 60);
+		diferenca_segundos_atual -= dias * 24 * 60 * 60;
+
+		int horas = diferenca_segundos_atual / (60 * 60);
+		diferenca_segundos_atual -= horas * 60 * 60;
+
+		int minutos = diferenca_segundos_atual / (60);
+		diferenca_segundos_atual -= minutos * 60;
+
+		int segundos = diferenca_segundos_atual;
+
+		System.out.printf("%s dia(s)\n", dias);
+		System.out.printf("%s hora(s)\n", horas);
+		System.out.printf("%s minuto(s)\n", minutos);
+		System.out.printf("%s segundo(s)\n", segundos);
+		*/
+		
+		//1064
+		
+		Scanner ent = new Scanner(System.in);
+		
+		double[] num = new double[6];
+		int cont = 0;
+		double media = 0;
+		
+		for(int i=0; i<num.length; i++){
+			num[i] = ent.nextDouble();
+			if(num[i] > 0){
+				cont++;
+				media += num[i];
+			}
+		}
+		System.out.println(cont + " valores positivos");
+		System.out.printf("%.1f%n", media/cont);
+		
+		//1065
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int[] num = new int[5];
+		int i = 0;
+		int par = 0;
+		while(i<num.length){
+			num[i] = ent.nextInt();
+			if(num[i]%2 == 0){
+				par++;
+			}
+			i++;
+		}
+		System.out.println(par + " valores pares");
+		
+		//1066
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int[] nums = new int[5];
+		int par, impar, positivo, negativo;
+		int i = 0;
+		par = 0;
+		impar = 0;
+		positivo = 0;
+		negativo = 0;
+		
+		do{
+			nums[i] = ent.nextInt();
+			if(nums[i]%2 == 0){
+				par++;
+			}else{
+				impar++;
+			}
+			if(nums[i]>0){
+				positivo++;
+			}else if(nums[i]<0){
+				negativo++;
+			}
+			i++;
+		}while(i<nums.length);
+		
+		System.out.println(par + " valor(es) par(es)");
+		System.out.println(impar + " valor(es) impar(es)");
+		System.out.println(positivo + " valor(es) positivo(s)");
+		System.out.println(negativo + " valor(es) negativo(s)");
+		
+		//1067
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		int div = 0;
+		
+		for(int i=1; i<=num; i++){
+			div = i % 2;
+			if(div!=0){
+				System.out.println(i);
+			}
+		}
+		
+		//1070
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		
+		for(int i = num; i <= num+11; i++){
+			if(i%2 !=0){
+				System.out.println(i);
+			}
+		}
+		
+		//1071
+		
 		
 		
     }
