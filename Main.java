@@ -6,14 +6,28 @@ public class Main {
 
     public static void main(String[] args){
 		
-		for(int i=1; i<60; ){
-			for(int j=60; j>=0; ){
-				System.out.println("I=" + i + " J=" + j);
-				i+=3;
-				j-=5;
+		Scanner ent = new Scanner(System.in);
+		
+		int casos = ent.nextInt();
+		int x, y, maior=0, soma=0;
+		for(int i=0; i<casos; i++){
+			x = ent.nextInt();
+			y = ent.nextInt();
+			for( ;x<y; x++){
+				if(x>y){
+					maior=x;
+					x=y;
+					y=maior;	
+					
+				}
+				if(x%2 == 1){
+					soma += x;
+				}
 			}
-			
-		}
+			System.out.println(soma);
+			System.out.println("x: " + x + "y: " + y);
+			soma = 0;
+		}	
 		
 	}
 }
