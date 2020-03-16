@@ -1360,6 +1360,226 @@ public class Main {
 		
 		//1071
 		
+		Scanner ent = new Scanner(System.in);
+		
+		int x = ent.nextInt();
+		int y = ent.nextInt();
+		int soma = 0;
+		
+		if(x>y){
+		    for(int i=x-1; i>y; i--){
+		        if(i%2 != 0){
+		            soma += i;
+		        }
+		    }		
+		}else{
+		    for(int i=y-1; i>x; i--){
+		        if(i%2 != 0){
+		            soma += i;
+		        }
+		    }
+		}
+		System.out.println(soma);
+		
+		//1072
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int qtd = ent.nextInt();
+		int teste, in, out;
+		in = 0;
+		out = 0;
+		for(int i = 0; i < qtd; i++){
+		    teste = ent.nextInt();
+		    if((teste>=10) && (teste<=20)){
+		        in++;
+		    }else{
+		        out++;
+		    }
+		}
+		System.out.println(in + " in");
+		System.out.println(out + " out");
+		
+		//1073
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num = ent.nextInt();
+        
+        for(int i=1; i<=num; i++){
+            if(i%2 == 0){
+                System.out.printf("%d^2 = %.0f%n", i, pow(i,2));
+            }
+        }
+		
+		//1074
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num = ent.nextInt();
+        int teste;
+        String[] resp = new String[num];
+        for(int i=0; i<num; i++){
+            teste = ent.nextInt();
+            
+            if((teste%2==0)&&(teste>0)){
+                resp[i] = "EVEN POSITIVE";
+            }
+            if((teste%2==0)&&(teste<0)){
+                resp[i] = "EVEN NEGATIVE";
+            }            
+            if((teste%2!=0)&&(teste>0)){
+                resp[i] = "ODD POSITIVE";
+            }
+            if((teste%2!=0)&&(teste<0)){
+                resp[i] = "ODD NEGATIVE";
+            }
+            if(teste==0){
+                resp[i] = "NULL";
+            }
+        }
+        for(int i=0; i<resp.length; i++){
+            System.out.println(resp[i]);
+        }
+		
+		//1075
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num = ent.nextInt();
+        
+        for(int i=1; i<10000; i++){
+            if(i%num == 2){
+                System.out.println(i);
+            }
+            
+        }
+		
+		//1078
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num = ent.nextInt();
+        
+        for(int i=1; i<=10; i++){
+            System.out.println(i + " x " + num + " = " + i*num);
+        }
+		
+		//1079
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num = ent.nextInt();
+        double a, b, c;
+        double[] array = new double[num];
+        
+        for(int i=0; i<num; i++){
+            a = ent.nextDouble();
+            b = ent.nextDouble();
+            c = ent.nextDouble();
+            array[i] = ((2*a) + (3*b) + (5*c))/10;
+        }
+        for(int i=0; i<num; i++){
+            System.out.printf("%.1f%n", array[i]);
+        }
+		
+		//1080
+		
+		Scanner ent = new Scanner(System.in);
+        		
+        int num;
+        int maior = Integer.MIN_VALUE;
+        int posicao = 0;
+        
+        for(int i=0; i<100; i++){
+            num = ent.nextInt();
+            if(num>maior){
+                maior=num;
+                posicao = i+1;
+            }
+        }
+        System.out.println(maior);
+        System.out.println(posicao);
+		
+		//1094 - MINHA RESOLUÇÃO COM 15% DE ERRO
+		
+		Scanner ent = new Scanner(System.in);
+        
+        int casos = ent.nextInt();
+        char animal;
+        int qtd;
+        int coelho = 0;
+        int rato = 0;
+        int sapo = 0;
+        int cobaias = 0;
+        float perCoelho, perRato, perSapo;
+
+        
+        for(int i=0; i<casos; i++){
+            qtd = ent.nextInt();
+            animal = ent.next().charAt(0);
+            if(animal == 'c'){
+                coelho += qtd;
+            }
+            if(animal == 'r'){
+                rato += qtd;
+            }
+            if(animal == 's'){
+                sapo += qtd;
+            }
+            cobaias += qtd;
+        }
+        perCoelho = (float)coelho/cobaias*100;
+        perRato = (float)rato/cobaias*100;
+        perSapo = (float)sapo/cobaias*100;
+        
+        System.out.println("Total: " + cobaias + " cobaias");
+        System.out.println("Total de coelhos: " + coelho);
+        System.out.println("Total de ratos: " + rato);
+        System.out.println("Total de sapos: " + sapo);
+        System.out.printf("Percentual de coelhos: %.2f%%%nPercentual de ratos: %.2f%%%nPercentual de sapos: %.2f%%%n", perCoelho, perRato, perSapo);
+		
+		//1094 - RESOLUÇÃO CORRETA
+		
+		Scanner input = new Scanner(System.in);
+       
+        int n = input.nextInt();
+       
+        int quantia;
+        int qtdRatos = 0, qtdCoelhos = 0, qtdSapos = 0, qtdTotal = 0;
+        char tipoCobaia;
+        for (int i = 0; i < n; i++) {
+            quantia = input.nextInt();
+            tipoCobaia = input.next().charAt(0);
+           
+            switch (tipoCobaia) {
+               
+                case 'C':
+                    qtdCoelhos += quantia;
+                    break;
+                case 'R':
+                    qtdRatos += quantia;
+                    break;
+                case 'S':
+                    qtdSapos += quantia;
+                    break;                   
+            }
+            qtdTotal += quantia;
+        }
+       
+        System.out.println("Total: " + qtdTotal + " cobaias");
+        System.out.println("Total de coelhos: " + qtdCoelhos);
+        System.out.println("Total de ratos: " + qtdRatos);
+        System.out.println("Total de sapos: " + qtdSapos);
+       
+        System.out.println("Percentual de coelhos: " + String.format("%.2f", ( (double) qtdCoelhos / qtdTotal) * 100) + " %");
+        System.out.println("Percentual de ratos: " + String.format("%.2f", ( (double) qtdRatos / qtdTotal) * 100) + " %");
+        System.out.println("Percentual de sapos: " + String.format("%.2f", ( (double) qtdSapos / qtdTotal) * 100) + " %");
+		
+		//1095
+		
+		
+		
 		
 		
     }
