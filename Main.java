@@ -7,27 +7,25 @@ public class Main {
     public static void main(String[] args){
 		
 		Scanner ent = new Scanner(System.in);
-		
-		int casos = ent.nextInt();
-		int x, y, maior=0, soma=0;
-		for(int i=0; i<casos; i++){
-			x = ent.nextInt();
-			y = ent.nextInt();
-			for( ;x<y; x++){
-				if(x>y){
-					maior=x;
-					x=y;
-					y=maior;	
-					
-				}
-				if(x%2 == 1){
-					soma += x;
-				}
-			}
-			System.out.println(soma);
-			System.out.println("x: " + x + "y: " + y);
-			soma = 0;
-		}	
+
+		int maior = 0;
+		int soma = 0;
+		int M = ent.nextInt();
+		int N = ent.nextInt();
+		if((M<=0) || (N<=0)){
+	        System.exit(0);
+	    }else if(M>N){
+	        maior = M;
+	        M = N;
+	        N = maior;
+	    }
+	    
+		for(int i = M; i <= N; i++){
+		    
+		    soma += i;
+		    System.out.printf("%d ", i);
+		}
+		System.out.println(" Sum=" + soma);	
 		
 	}
 }

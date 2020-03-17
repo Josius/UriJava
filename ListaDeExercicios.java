@@ -1634,9 +1634,34 @@ public class Main {
 		
 		//1099
 		
+		Scanner ent = new Scanner(System.in);
+		
+		int casos = ent.nextInt();
+		int x, y, maior=0, soma=0;
+		for(int i=0; i<casos; i++){
+			x = ent.nextInt();
+			y = ent.nextInt();
+			if(x>y){
+					maior=x;
+					x=y;
+					y=maior;		
+				}
+			x = x+1;	
+			while(x<y){
+				
+				if((x%2) == 1){
+					soma += x;
+				}
+				++x;
+			}
+			
+			System.out.println(soma);
+			soma = 0;
+		}
+		
+		//1101
 		
 		
-	}
 		
 		
 		
