@@ -1212,7 +1212,7 @@ public class Main {
 			System.out.println(resMin/60 + " minuto(s)" );
 			System.out.println(resMin%60 + " segundo(s)");
 		}*/
-		//OUTRA RESOLUCAO INTERESSANTE COM OUTRO TIPO DE ENTRADA PARA ESSE PROBLEMA
+		//OUTRA SOLUÇÃO INTERESSANTE COM OUTRO TIPO DE ENTRADA PARA ESSE PROBLEMA
 		//VER:		https://www.devmedia.com.br/metodos-split-e-indexof-mais-metodos-da-classe-string/23458	
 		/*
 		Scanner entrada = new Scanner(System.in);
@@ -1501,7 +1501,7 @@ public class Main {
         System.out.println(maior);
         System.out.println(posicao);
 		
-		//1094 - MINHA RESOLUÇÃO COM 15% DE ERRO
+		//1094 - MINHA SOLUÇÃO COM 15% DE ERRO
 		
 		Scanner ent = new Scanner(System.in);
         
@@ -1539,7 +1539,7 @@ public class Main {
         System.out.println("Total de sapos: " + sapo);
         System.out.printf("Percentual de coelhos: %.2f%%%nPercentual de ratos: %.2f%%%nPercentual de sapos: %.2f%%%n", perCoelho, perRato, perSapo);
 		
-		//1094 - RESOLUÇÃO CORRETA
+		//1094 - SOLUÇÃO CORRETA
 		
 		Scanner input = new Scanner(System.in);
        
@@ -1611,7 +1611,7 @@ public class Main {
 			i = i+2;
 		}
 		
-		//1098 - RESOLUÇÃO CORRETA
+		//1098 - SOLUÇÃO CORRETA
 		
 		for (float i = 0,j=1,k=0; i<2.1f;j++,k++) {
 			
@@ -1659,9 +1659,108 @@ public class Main {
 			soma = 0;
 		}
 		
-		//1101
+		//1101 - MINHA SOLUÇÃO COM ERRO DE 10%
 		
+		Scanner ent = new Scanner(System.in);
+
+		int maior = 0;
+		int soma = 0;
+		int M, N;
+		do{
+			M = ent.nextInt();
+			N = ent.nextInt();
+			if((M<=0) || (N<=0)){
+				System.exit(0);
+			}	
+			if(M>N){
+				maior = M;
+				M = N;
+				N = maior;
+			}
+			
+			for(M = M; M <= N; M++){
+				
+				soma += M;
+				System.out.printf("%d ", M);
+			}
+			System.out.println(" Sum=" + soma);				
+		}while(M>0 && N>0);	
 		
+		//1101 - SOLUÇÃO CORRETA
+		
+		int X, Y;
+		Scanner input =new Scanner(System.in);
+		
+		while (((X = input.nextInt()) > 0 )&&((Y = input.nextInt()) > 0 )) {
+			int sum = 0;
+			if (X > Y) {
+				for (Y = Y; Y <= X; Y++) {
+					sum+=Y;
+					System.out.print(Y+" ");
+				}
+				System.out.print("Sum="+sum+"\n");
+			}else {
+				for (X = X; X <= Y; X++) {
+					sum+=X;
+					System.out.print(X+" ");
+				}
+				System.out.print("Sum="+sum+"\n");
+			}
+		}
+		
+		//1113
+		
+		Scanner ent = new Scanner(System.in);
+
+		int x, y; 
+		do{
+			x = ent.nextInt();
+			y = ent.nextInt();
+			if(x < y){
+				System.out.println("Crescente");
+			}else if(x > y){
+				System.out.println("Decrescente");
+			}
+		}
+		while(x != y);
+		
+		//1114
+		
+		Scanner ent = new Scanner(System.in);
+
+		int senha, password;
+		
+		do{
+			senha = ent.nextInt();
+			password = 2002;
+			if(senha != password){
+				System.out.println("Senha Invalida");
+			}else{
+				System.out.println("Acesso Permitido");
+			}
+		}while(senha != password);
+		
+		//1115
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int x, y;
+		
+		do{
+			x = ent.nextInt();
+			y = ent.nextInt();
+			if(x>0 && y>0){
+				System.out.println("primeiro");
+			}if(x<0 && y>0){
+				System.out.println("segundo");
+			}if(x<0 && y<0){
+				System.out.println("terceiro");
+			}if(x>0 && y<0){
+				System.out.println("quarto");
+			}
+		}while(x != 0 && y != 0);
+		
+		//1116
 		
 		
 		
