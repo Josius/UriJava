@@ -1762,6 +1762,51 @@ public class Main {
 		
 		//1116
 		
+		Scanner ent = new Scanner(System.in);
+		
+		int caso, x, y;
+		double a, b, div;
+		
+		caso = ent.nextInt();
+		
+		do{
+			x = ent.nextInt();
+			y = ent.nextInt();
+			
+			a = x;
+			b = y;
+			
+			div = a/b;
+			if(b == 0){
+				System.out.println("divisao impossivel");
+			}else{
+				System.out.println(div);
+			}
+			
+			caso--;
+		}while(caso>0);
+		
+		//1116 - COM CAST
+		
+		int N;
+		int X, Y;
+		float result;
+		Scanner input =new Scanner(System.in);
+		N = input.nextInt();
+		for (int i = 1; i <= N; i++) {
+			X = input.nextInt();
+			Y = input.nextInt();
+				if (Y == 0) {
+					System.out.print("divisao impossivel\n");
+				}else {
+					result =(float) X / Y;
+					System.out.printf("%.1f\n",result);
+				}
+				
+		}
+		
+		//1117
+		
 		
 		
     }
