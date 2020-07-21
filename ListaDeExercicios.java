@@ -1902,8 +1902,156 @@ public class Main {
 		
 		//1131
 		
+		public static String verVencedor(int gremio, int inter){
+			if(gremio>inter){
+				return "Gremio venceu mais";
+			}else if(gremio<inter){
+				return "Inter venceu mais";
+			}else{
+				return "Nao houve vencedor";
+			}
+		}
 		
+		public static void main(String[] args){
+			Scanner ent = new Scanner(System.in);
+			
+			int resGre = 0;
+			int	resInt = 0;
+			int gremio = 0;
+			int inter = 0;
+			int grenais = 1;
+			int	empates = 0;
+			int resp = 0;
+			String vencedor = "";
+			
+			do{
+				resInt = ent.nextInt();
+				resGre = ent.nextInt();
+				
+				if(resGre>resInt){
+					gremio++;
+				}else if(resGre<resInt){
+					inter++;
+				}else{
+					empates++;
+				}
+				
+				System.out.println("Novo grenal (1-sim 2-nao)");
+				resp = ent.nextInt();
+				if(resp==1){
+					grenais++;
+				}else{
+					vencedor = verVencedor(gremio, inter);
+					
+					System.out.println(grenais + " grenais");
+					System.out.println("Inter:" + inter);
+					System.out.println("Gremio:" + gremio);
+					System.out.println("Empates:" + empates);
+					System.out.println(vencedor);
+				}
+				
+			}while(resp==1);
+			
+		}
 		
+		//1132
 		
+		Scanner ent = new Scanner(System.in);
+		
+		int numA, numB, temp, calc;
+		int soma = 0;
+		
+		numA = ent.nextInt();
+		numB = ent.nextInt();
+		
+		if(numA>numB){
+			temp = numA;
+			numA = numB;
+			numB = temp;
+		}
+		
+		int cont = numB;
+		
+		while(numB>=numA){
+			
+			if(numA%13!=0 || numB%13!=0){
+				soma += numA;
+			}
+			numA++;
+		}
+		System.out.println(soma);
+		
+		//1133
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int numA, numB, temp;
+		
+		numA = ent.nextInt();
+		numB = ent.nextInt();
+		
+		if(numA>numB){
+			temp=numA;
+			numA = numB;
+			numB = temp;
+		}
+		numA++;
+		for(; numA<numB; numA++){
+			if(numA%5 == 2 || numA%5 == 3){
+				System.out.println(numA);
+			}
+		}
+		
+		//1134
+		
+		Scanner ent = new Scanner(System.in);
+		int alcool=0; 
+		int gas=0; 
+		int diesel=0; 
+		int resp;
+		
+		boolean continuar = true;
+		
+		while(continuar){
+			
+			resp = ent.nextInt();
+			
+			if(resp==1){
+				alcool++;
+			}else if(resp==2){
+				gas++;
+			}else if(resp==3){
+				diesel++;
+			}else if(resp==4){
+				System.out.println("MUITO OBRIGADO");
+				System.out.println("Alcool: " + alcool);
+				System.out.println("Gasolina: " + gas);
+				System.out.println("Diesel: " + diesel);
+				continuar = false;
+			}else{
+				continuar=true;
+			}
+		}
+		
+		//1142
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		int java = 1;
+	
+		for(int i=0; i<num; i++){
+			for(int j=0; j<4; j++){
+				if((java)%4 == 0){
+					System.out.print("PUM");
+				}else{
+					System.out.print(java + " ");
+				}
+				java++;
+			}
+			System.out.println();
+		}
+		
+		//1143
     }
 }
