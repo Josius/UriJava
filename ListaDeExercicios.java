@@ -2052,6 +2052,34 @@ public class Main {
 			System.out.println();
 		}
 		
-		//1143
+		//1143 - MINHA SOLUÇÃO
+		
+		Scanner ent = new Scanner(System.in);
+		int num = ent.nextInt();
+		int a = 0;
+		
+		for(int i=1; i<=num; i++){			
+			for(int j=1; j<4; j++){
+				a = (int)Math.pow(i, j);
+				System.out.print(a + " ");
+			}
+			System.out.println();
+		}
+		
+		//1143 - SOLUÇÃO CORRETA
+		
+		Scanner ent = new Scanner(System.in);
+		int num = ent.nextInt();
+		int a = 0;
+		int b = 0;
+		
+		for(int i=1; i<=num; i++){			
+			a = (int)Math.pow(i, 2);
+			b = i*a;
+			System.out.println(i + " " + a + " " + b);
+		}
+		
+		//1144
+		
     }
 }
