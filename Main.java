@@ -7,5 +7,6 @@ public class Main {
 		Scanner ent = new Scanner(System.in);
 		
 		
+		
 	}	
 }
