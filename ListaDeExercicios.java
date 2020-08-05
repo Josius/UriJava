@@ -2080,6 +2080,22 @@ public class Main {
 		}
 		
 		//1144
+		Scanner ent = new Scanner(System.in);
 		
+		int a = 1;
+		
+		int num = ent.nextInt();
+		
+		System.out.println(a + " " + a + " " + a);
+		for(int i=0; i<(num*2-1); i++){
+			if(i%2 == 1){
+				System.out.println(a + " " + (a*a) + " " + (a*a*a));
+			}else{
+				System.out.println(a + " " + (a*a+1) + " " + (a*a*a+1));
+				a++;
+			}
+		}
+		
+		//1145
     }
 }
