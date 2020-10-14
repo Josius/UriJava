@@ -2097,5 +2097,55 @@ public class Main {
 		}
 		
 		//1145
+		Scanner ent = new Scanner(System.in);
+		
+		int x = ent.nextInt();		
+		int y = ent.nextInt();
+		
+		for(int i = 1; i <= y; i++){
+			
+			if(i%x != 0){
+				System.out.print(i + " ");
+			}else{
+				System.out.print(i + "\n");
+			}
+		}
+		
+		//1146
+		Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		
+		for( ;num!=0;){
+			
+			for(int i=1; i <= num; i++){
+				if(i==num) System.out.print(i + "\n");
+				else System.out.print(i + " ");
+			}
+			num = ent.nextInt();
+		}
+		
+		//1149
+		Scanner ent = new Scanner(System.in);
+		
+		int numA = ent.nextInt();
+		int numN = ent.nextInt();
+		boolean flag = true;
+		int soma = 0;
+		while(flag){
+			if(numN < 1){
+				numN = ent.nextInt();
+			}else{
+				for(int i=0; i<numN; i++){
+					soma += numA + i;
+				}
+				flag=false;
+			}
+		}
+		System.out.println(soma);
+		
+		//1150
+		
+		
     }
 }
