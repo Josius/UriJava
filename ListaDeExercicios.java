@@ -2144,7 +2144,7 @@ public class Main {
 		}
 		System.out.println(soma);
 		
-		//1149 - 2ª resolucao
+		//1149 - 2ª resolucao COM RECURSAO
 		import java.util.Scanner;
 
 		public class Main {
@@ -2175,6 +2175,23 @@ public class Main {
 		}
 		
 		//1150
+		Scanner ent = new Scanner(System.in);
+		
+		int a = ent.nextInt();
+		int b = ent.nextInt();
+		int soma = 0;
+		while(b<=a){
+			
+			b = ent.nextInt();
+		}
+		int j = 0;
+		for(int i=a; soma<=b; i++){
+			soma += a++;
+			j++;
+		}
+		System.out.println(j);
+		
+		//1151
 		
 		
     }
