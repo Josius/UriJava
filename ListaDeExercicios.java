@@ -2144,6 +2144,36 @@ public class Main {
 		}
 		System.out.println(soma);
 		
+		//1149 - 2ª resolucao
+		import java.util.Scanner;
+
+		public class Main {
+			
+			public static void main(String[] args){
+				
+				Scanner ent = new Scanner(System.in);
+				
+				int numA = ent.nextInt();
+				int numN = ent.nextInt();
+				boolean flag = true;
+				
+				while(flag){
+					if(numN < 1){
+						numN = ent.nextInt();
+					}else{
+						System.out.println(soma(numA, numN));
+						flag=false;
+					}
+				}
+			}
+			
+			public static int soma(int numA, int numN){
+				
+				if(numN <= 0)  return 0;
+				else return numA + (numN-1) + soma(numA, --numN);
+			}
+		}
+		
 		//1150
 		
 		
