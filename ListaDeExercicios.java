@@ -2191,7 +2191,37 @@ public class Main {
 		}
 		System.out.println(j);
 		
-		//1151
+		//1151 - 5% de erro
+			Scanner ent = new Scanner(System.in);
+		
+		int a = 0;
+		int b = 1;
+		int c = 0;
+		int n = ent.nextInt();
+		
+		for(int i=0; i <= n; i++){
+			
+			if(i == n) System.out.print(a + "\n");
+			else System.out.print(a + " ");
+			a = b;
+			b = b + c;
+			c = a;
+		}
+		
+		//1151 - CORRETO
+	    Scanner leitor = new Scanner(System.in);
+        int N = leitor.nextInt();
+        int proximo, anterior = 0, atual = 1;
+        for (int i = 1; i <= N; i++) {
+        	if (i == N) System.out.println(anterior);
+        	else System.out.print(anterior + " ");
+        	proximo = anterior + atual;
+        	anterior = atual;
+        	atual = proximo;
+        }
+    	
+		//1153
+		
 		
 		
     }
