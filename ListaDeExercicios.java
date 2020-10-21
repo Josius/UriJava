@@ -2221,6 +2221,18 @@ public class Main {
         }
     	
 		//1153
+		Scanner ent = new Scanner(System.in);
+		
+		int numN = ent.nextInt();
+		int fat = 1;
+		for(int i=0; i < numN; i++){
+			if(numN>0){
+				fat = fat*(numN-i);
+			}
+		}
+		System.out.println(fat);
+		
+		//1153 - 2ª resolucao com RECURSAO
 		
 		
 		
