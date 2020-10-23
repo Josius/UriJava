@@ -2234,7 +2234,35 @@ public class Main {
 		
 		//1153 - 2ª resolucao com RECURSAO
 		
+		//1154
+		Scanner ent = new Scanner(System.in);
 		
+		int num, cont = 0;
+		float media = 0;
+		boolean flag = true;
+		
+		while(flag){
+			
+			num = ent.nextInt();
+			
+			if(num < 0){
+				flag = false;
+			}else {
+				media += num;
+				cont++;
+			}
+		}
+		
+		System.out.printf("%.2f%n",media/cont);
+		
+		//1155
+		double s = 1;
+		for(double i = 2; i <= 100; i++){
+			s += (1/i);
+		}
+		System.out.printf("%.2f%n",s);
+		
+		//1156
 		
     }
 }
