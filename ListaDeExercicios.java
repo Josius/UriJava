@@ -2233,6 +2233,20 @@ public class Main {
 		System.out.println(fat);
 		
 		//1153 - 2ª resolucao com RECURSAO
+		public static void main(String[] args){
+		
+		Scanner ent = new Scanner(System.in);
+		
+		int n = ent.nextInt();
+		System.out.println(fat(n));
+		
+		}	
+		
+		public static int fat(int n){
+		
+			if(n<=1) return 1;
+			else return n * fat(n-1);
+		}
 		
 		//1154
 		Scanner ent = new Scanner(System.in);
@@ -2261,6 +2275,21 @@ public class Main {
 			s += (1/i);
 		}
 		System.out.printf("%.2f%n",s);
+		
+		//1155 - 2ª resolucao com RECURSAO
+		public static void main(String[] args){
+		
+			Scanner ent = new Scanner(System.in);
+			
+			double div = 1;
+			System.out.printf("%.2f%n",somaS(div));		
+		}	
+		
+		public static double somaS(double div){
+			
+			if(div>100) return 0;
+			else return 1/div + somaS(div+1);
+		}
 		
 		//1156
 		
