@@ -2278,9 +2278,7 @@ public class Main {
 		
 		//1155 - 2ª resolucao com RECURSAO
 		public static void main(String[] args){
-		
-			Scanner ent = new Scanner(System.in);
-			
+					
 			double div = 1;
 			System.out.printf("%.2f%n",somaS(div));		
 		}	
@@ -2292,6 +2290,32 @@ public class Main {
 		}
 		
 		//1156
+		public class Main{
+			
+			public static void main(String[] args){
+								
+				double divisor = 3;
+				double dividendo = 2;
+				
+				System.out.printf("%.2f%n",somaSII(divisor, dividendo));
+			}	
+			
+			public static double somaSII(double divisor, double dividendo){
+				
+				if (divisor>39) return 1;
+				else return divisor/dividendo + somaSII((divisor+2), (2*dividendo));
+			}
+		}
 		
+		//1157
+		Scanner ent = new Scanner(System.in);
+		
+		int num = ent.nextInt();
+		
+		for(int i=1; i<=num; i++){
+			if(num%i == 0) System.out.println(i);
+		}
+		
+		//1158
     }
 }
